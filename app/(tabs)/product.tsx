@@ -1,42 +1,23 @@
 import React from "react";
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  StyleSheet,
-  Image,
-} from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
 const LoginScreen = () => {
   return (
     <View style={styles.body}>
       <View style={styles.container}>
-        <Text style={styles.title}>Nome do Produto</Text>
         <Image
           style={styles.image}
           source={require("../../assets/images/react-logo.png")}
         ></Image>
-        <Text style={styles.title}>Descrição</Text>
-        <Text style={styles.title}>Preço</Text>
-        {/* <View style={styles.inputGroup}>
-          <Text style={styles.label}>Usuário:</Text>
-          <TextInput style={styles.input} placeholder="Digite seu usuário" />
-        </View> */}
-        {/* <View style={styles.inputGroup}>
-          <Text style={styles.label}>Senha:</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Digite sua senha"
-            secureTextEntry={true}
-          />
-        </View> */}
-        {/* <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Entrar</Text>
-        </TouchableOpacity> */}
-        {/* <Text style={styles.forgotPassword}>
-          <Text style={styles.link}>Esqueci minha senha</Text>
-        </Text> */}
+        <Text style={styles.title}>Nome do Produto</Text>
+        <Text style={styles.text}>
+          Uma descrição detalhada do produto. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit.
+        </Text>
+        <Text style={styles.text}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Text>
+        <Text style={styles.price}>Preço: R$ 199,90</Text>
       </View>
     </View>
   );
@@ -66,6 +47,23 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 20,
     color: "#333",
+  },
+  price: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginBottom: 20,
+    color: "#333",
+  },
+  text: {
+    fontSize: 16,
+    marginBottom: 20,
+    color: "#333",
+    textAlign: "justify",
+  },
+  image: {
+    width: 180,
+    height: 180,
+    marginBottom: 20,
   },
   //   inputGroup: {
   //     marginBottom: 15,
